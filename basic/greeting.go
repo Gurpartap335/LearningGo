@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	fmt.Println("Enter your name")
 	var name string
-	fmt.Scan(&name)
-	fmt.Printf("Hello, %v! I am Go\n", name)
+	fmt.Scanln(&name)
+	name = strings.TrimSpace(name)
+	fmt.Printf("Hello, %s! I am Go\n", name)
 }

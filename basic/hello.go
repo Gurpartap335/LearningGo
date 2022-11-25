@@ -1,3 +1,4 @@
+// code belongs to main package
 package main
 
 import "fmt"

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
@@ -12,6 +13,7 @@ func main() {
 
 	fmt.Println("Enter Your first name")
 	fmt.Scanln(&firstName)
+	firstName = strings.TrimSpace(firstName)
 
 	fmt.Println("Enter Your last name")
 	fmt.Scanln(&lastName)

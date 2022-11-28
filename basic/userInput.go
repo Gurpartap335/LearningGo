@@ -14,7 +14,7 @@ func main() {
 	fmt.Scanln(&firstName)
 
 	fmt.Println("Enter Your last name")
-	fmt.Scanln(&secondName)
+	fmt.Scanln(&lastName)
 
 	fmt.Println("What's your favorite color")
 	fmt.Scanln(&color)
@@ -22,4 +22,5 @@ func main() {
 	fmt.Println("Enter your favorite character name")
 	fmt.Scanln(&character)
 
-	fmt.Printf("My name is %s %s. My favorite color is  %s and character name is %s", firstName, lastName, color, character)
+	fmt.Printf("My name is %s %s. My favorite color is %s and character name is %s.", firstName, lastName, color, character)
+}

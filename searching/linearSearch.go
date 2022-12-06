@@ -6,13 +6,9 @@ import (
 
 func main() {
 
-	arr := []int{1, 2, 3, 4, 11, 13, 5}
-
-	fmt.Println(searchL(arr, 5))
-	fmt.Println(linear(arr, 5))
-	fmt.Println(linearR(arr, 4, 0))
-	fmt.Println(linearR2(arr, 123, 0))
-	fmt.Println(linearR2(arr, 11, 0))
+	arr := []int{1, 2, 3, 4, 11, 3, 3, 13, 5}
+	a := []int{}
+	fmt.Println(linearAll(arr, 3, 0, a))
 }
 
 func searchL(arr []int, target int) int {
@@ -44,6 +40,19 @@ func linearR(arr []int, target int, index int) int {
 	} else {
 		return linearR(arr, target, index + 1)
 	}
+}
+
+// return all the index of element
+func linearAll(arr[] int, target int, index int, ans []int) []int {
+	if (index == len(arr)) {
+		return ans
+	}
+
+	if (arr[index] == target) {
+		ans = append(ans, index)
+	} 
+
+    return linearAll(arr, target, index + 1, ans)
 }
 
 // return value in boolean if value exits or not.
